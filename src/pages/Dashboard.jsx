@@ -79,9 +79,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
     const { user } = useAuth();
 
-    useEffect(() => {
-        fetchDashboardData();
-    }, [fetchDashboardData]);
+
 
     const fetchDashboardData = useCallback(async () => {
         try {
@@ -112,6 +110,10 @@ const Dashboard = () => {
             setLoading(false);
         }
     }, [user?.role, enqueueSnackbar]);
+
+    useEffect(() => {
+        fetchDashboardData();
+    }, [fetchDashboardData]);
 
     const formatCurrency = (value) => {
         return new Intl.NumberFormat('en-NG', {

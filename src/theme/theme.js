@@ -92,11 +92,11 @@ export const getDesignTokens = (mode) => ({
         },
         MuiTableCell: {
             styleOverrides: {
-                head: {
+                head: (({ theme }) => ({
                     fontWeight: 600,
-                    backgroundColor: mode === 'light' ? '#f8fafc' : '#1e293b',
-                    color: mode === 'light' ? '#475569' : '#e2e8f0',
-                }
+                    backgroundColor: theme.palette.mode === 'light' ? '#f8fafc' : '#1e293b',
+                    color: theme.palette.mode === 'light' ? '#475569' : '#e2e8f0',
+                }))
             }
         }
     },

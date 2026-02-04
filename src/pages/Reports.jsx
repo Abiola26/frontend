@@ -122,6 +122,19 @@ const Reports = () => {
         setOpenDialog(true);
     };
 
+    const refreshData = useCallback(async () => {
+        const params = new URLSearchParams();
+        if (startDate) params.append('start_date', startDate);
+        if (endDate) params.append('end_date', endDate);
+        if (selectedFleet !== 'All') params.append('fleets', selectedFleet);
+        try {
+            const response = await api.get('/analytics/summary', { params });
+            setData(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }, [startDate, endDate, selectedFleet]);
+
     const handleConfirmDelete = async () => {
         setOpenDialog(false);
 
@@ -154,18 +167,7 @@ const Reports = () => {
         }
     };
 
-    const refreshData = useCallback(async () => {
-        const params = new URLSearchParams();
-        if (startDate) params.append('start_date', startDate);
-        if (endDate) params.append('end_date', endDate);
-        if (selectedFleet !== 'All') params.append('fleets', selectedFleet);
-        try {
-            const response = await api.get('/analytics/summary', { params });
-            setData(response.data);
-        } catch (error) {
-            console.error(error);
-        }
-    }, [startDate, endDate, selectedFleet]);
+
 
     const handleDownload = async (type) => {
         try {
