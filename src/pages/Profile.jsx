@@ -17,7 +17,7 @@ import api from '../services/api';
 import authService from '../services/authService';
 import { useSnackbar } from 'notistack';
 
-const Profile = () => {
+function Profile() {
     const { user, updateUser } = useAuth();
     const { enqueueSnackbar } = useSnackbar();
 

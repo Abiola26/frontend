@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Grid, Paper, Skeleton, Stack } from '@mui/material';
 
-export const PageSkeleton = () => {
+export function PageSkeleton() {
     return (
         <Box>
             <Box sx={{ mb: 4 }}>

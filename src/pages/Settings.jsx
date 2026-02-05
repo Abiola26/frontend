@@ -21,7 +21,7 @@ import { useColorMode } from '../context/ColorModeContext';
 import api from '../services/api';
 import { useSnackbar } from 'notistack';
 
-const Settings = () => {
+function Settings() {
     const { user } = useAuth();
     const { mode, toggleColorMode } = useColorMode();
     const { enqueueSnackbar } = useSnackbar();

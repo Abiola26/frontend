@@ -22,7 +22,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 
-const ForgotPassword = () => {
+function ForgotPassword() {
     const navigate = useNavigate();
     const [step, setStep] = useState(1); // 1: Request, 2: Reset
     const [email, setEmail] = useState('');
