@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import { Visibility, VisibilityOff, LockOutlined, PersonOutline } from '@mui/icons-material';
 
-const Login = () => {
+function Login() {
     const theme = useTheme();
     const isDarkMode = theme.palette.mode === 'dark';
 

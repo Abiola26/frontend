@@ -16,7 +16,7 @@ import { Download as DownloadIcon } from '@mui/icons-material';
 import api from '../services/api';
 import { useSnackbar } from 'notistack';
 
-const AuditLogs = () => {
+function AuditLogs() {
     const [logs, setLogs] = useState([]);
     const { enqueueSnackbar } = useSnackbar();
 

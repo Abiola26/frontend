@@ -7,7 +7,7 @@ export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
 export const useColorMode = () => useContext(ColorModeContext);
 
-export const ColorModeProvider = ({ children }) => {
+export function ColorModeProvider({ children }) {
     // Check local storage or system preference
     const [mode, setMode] = useState(() => {
         const savedMode = localStorage.getItem('colorMode');

@@ -70,7 +70,7 @@ const StatCard = ({ title, value, icon, color, loading, trend }) => {
     );
 };
 
-const Dashboard = () => {
+function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [stats, setStats] = useState(null);
     const [recentLogs, setRecentLogs] = useState([]);

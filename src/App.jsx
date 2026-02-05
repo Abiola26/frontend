@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { CssBaseline, Box, CircularProgress } from '@mui/material';
 import { SnackbarProvider } from 'notistack';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { ColorModeProvider } from './context/ColorModeContext';
+
+// Pages
 import Login from './pages/Login';
-import MainLayout from './components/layout/MainLayout';
 import Dashboard from './pages/Dashboard';
 import Upload from './pages/Upload';
-
 import Reports from './pages/Reports';
 import Analytics from './pages/Analytics';
 import Profile from './pages/Profile';
@@ -16,7 +17,10 @@ import UserManagement from './pages/UserManagement';
 import AuditLogs from './pages/AuditLogs';
 import ForgotPassword from './pages/ForgotPassword';
 
-const ProtectedRoute = ({ children }) => {
+// Layout
+import MainLayout from './components/layout/MainLayout';
+
+function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
 
   if (loading) {
@@ -32,9 +36,7 @@ const ProtectedRoute = ({ children }) => {
   }
 
   return children;
-};
-
-import { ColorModeProvider } from './context/ColorModeContext';
+}
 
 function App() {
   return (

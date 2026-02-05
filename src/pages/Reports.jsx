@@ -28,7 +28,7 @@ import api from '../services/api';
 import { useSnackbar } from 'notistack';
 import { useAuth } from '../context/AuthContext';
 
-const Reports = () => {
+export default function Reports() {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [selectedFleet, setSelectedFleet] = useState('All');
@@ -417,6 +417,4 @@ const Reports = () => {
             </Dialog>
         </Box>
     );
-};
-
-export default Reports;
+}

@@ -29,7 +29,7 @@ import {
 import { useSnackbar } from 'notistack';
 import api from '../services/api';
 
-const Upload = () => {
+export default function Upload() {
     const [files, setFiles] = useState([]);
     const [uploading, setUploading] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -313,6 +313,4 @@ const Upload = () => {
             )}
         </Box>
     );
-};
-
-export default Upload;
+}

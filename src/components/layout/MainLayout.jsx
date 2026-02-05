@@ -49,7 +49,7 @@ import { useColorMode } from '../../context/ColorModeContext';
 
 const drawerWidth = 260;
 
-const MainLayout = () => {
+function MainLayout() {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 

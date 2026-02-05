@@ -23,7 +23,7 @@ import { Delete, Edit } from '@mui/icons-material';
 import api from '../services/api';
 import { useSnackbar } from 'notistack';
 
-const UserManagement = () => {
+function UserManagement() {
     const [users, setUsers] = useState([]);
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedUser, setSelectedUser] = useState(null);

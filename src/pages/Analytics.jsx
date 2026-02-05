@@ -32,7 +32,7 @@ ChartJS.register(
 
 import { PageSkeleton } from '../components/common/PageSkeleton';
 
-const Analytics = () => {
+export default function Analytics() {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [selectedFleet, setSelectedFleet] = useState('All');
@@ -371,6 +371,4 @@ const Analytics = () => {
             )}
         </Box>
     );
-};
-
-export default Analytics;
+}
