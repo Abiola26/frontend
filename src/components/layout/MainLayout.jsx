@@ -407,6 +407,6 @@ function MainLayout() {
             </Box>
         </Box>
     );
-};
+}
 
 export default MainLayout;
